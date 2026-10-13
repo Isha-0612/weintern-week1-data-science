@@ -46,7 +46,7 @@ weintern-week1-data-science/
 │   └── sales_analysis.ipynb
 ├── reports/
 │   ├── ecommerce_data_quality_audit.xlsx
-│   ├── final_report.md
+│   ├── README.md
 │   ├── final_report.pdf
 │   └── kpi_summary.xlsx
 └── outputs/
