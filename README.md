@@ -1,85 +1,194 @@
-# weintern-week1-data-science
-WeIntern Week 1 Data Science and Analytics Project
-# Week 1 Assignment: E-Commerce Dataset Cleaning
 
-## Week and objective
-**Week:** 1  
-**Objective:** Inspect, clean, validate, and document an e-commerce dataset while preserving the original source file.
+# WeIntern Week 1 — E-Commerce Data Cleaning and Sales Analysis
 
-## Dataset description
-The source dataset is an Excel workbook containing e-commerce records. Depending on the supplied file, fields may include order identifiers, customer/product information, quantity, price, totals, dates, payment methods, delivery status, or location.
+## Project Overview
 
-The original source file is stored in `data/raw/` locally in this repository. Do not overwrite it. The cleaned dataset is saved separately in `data/cleaned/`.
+This project was completed as part of the WeIntern Data Science Internship, Week 1 assignment.
 
-## Tools and libraries
+The objective is to develop practical skills in data cleaning, exploratory data analysis, KPI calculation, data visualization, and business reporting using Python.
+
+The project follows a structured workflow to inspect an e-commerce dataset, identify data quality issues, prepare a cleaned dataset, analyze sales and customer patterns, and communicate findings through visualizations and a final report.
+
+## Objectives
+
+- Inspect and understand the structure of an e-commerce dataset.
+- Identify missing values, duplicate records, invalid values, and inconsistent categories.
+- Clean the data using documented and justified decisions.
+- Calculate key sales performance indicators.
+- Explore category, product, customer, geographic, and time-based patterns.
+- Create visualizations to communicate analytical findings.
+- Present the results in a structured report and organized GitHub repository.
+
+## Tools and Technologies
+
 - Python
-- pandas
+- Pandas
 - NumPy
-- openpyxl
-- Google Colab / Google Drive
+- Matplotlib
+- Seaborn
 - Jupyter Notebook
+- Excel
+- GitHub
 
-## Key steps performed
-1. Loaded and inspected the source workbook.
-2. Reviewed dimensions, data types, sample rows, and proposed business meanings.
-3. Standardized column names and selected text/category values.
-4. Reported missing-value counts and percentages, with documented handling decisions.
-5. Detected exact duplicate rows and separately investigated repeated order IDs.
-6. Validated likely numeric and date fields.
-7. Flagged negative quantities, non-positive prices, invalid numeric/date values, and potential total mismatches.
-8. Removed only entirely blank rows and exact duplicate rows under the documented rules.
-9. Compared data quality before and after cleaning.
-10. Exported a cleaned dataset and audit reports.
+## Repository Structure
 
-## Major findings
-Populate this section **after running the notebook**. Include the actual row/column counts, missing-value findings, duplicate counts, validation issues, and important limitations. Do not invent results before processing the dataset.
-
-## Folder structure
 ```text
-data-science-week1-assignment/
+weintern-week1-data-science/
+├── README.md
+├── requirements.txt
 ├── data/
 │   ├── raw/
+│   │   └── [raw dataset file]
 │   └── cleaned/
+│       └── ecommerce_cleaned_dataset.xlsx
 ├── notebooks/
-│   └── week1_ecommerce_data_cleaning_rectified.ipynb
-├── outputs/
-│   ├── charts/
-│   └── dashboard/
+│   ├── week1_analysis.ipynb
+│   └── sales_analysis.ipynb
 ├── reports/
+│   ├── ecommerce_data_quality_audit.xlsx
+│   ├── final_report.md
 │   ├── final_report.pdf
-│   └── ecommerce_data_quality_audit.xlsx
-├── screenshots/
-├── README.md
-└── requirements.txt
+│   └── kpi_summary.xlsx
+└── outputs/
+    ├── charts/
+    │   ├── revenue_by_category.png
+    │   ├── monthly_sales_trend.png
+    │   └── payment_mode_distribution.png
+    └── dashboard/
+        └── dashboard_mockup.png
 ```
 
-## Execution instructions
-### Google Colab
-1. Upload `notebooks/week1_ecommerce_data_cleaning_rectified.ipynb` to Google Colab.
-2. Put the source Excel workbook in Google Drive at:
-   `/content/drive/MyDrive/e-commerce_dataset.xlsx`
-3. Run the notebook cells from top to bottom.
-4. Review the column dictionary, detected columns, category variants, and all flagged records.
-5. The notebook creates the cleaned dataset and audit reports under:
-   `/content/drive/MyDrive/data-science-week1-assignment/`
-6. Copy the generated outputs into this repository's `data/cleaned/` and `reports/` folders before committing.
+The structure above represents the intended organization of the project. If your repository uses different filenames or locations, update this section to match the actual files.
 
-### Local Python environment (optional)
-Install dependencies with:
+## Project Workflow
+
+### 1. Data Inspection
+
+The initial dataset was examined to understand its dimensions, column names, data types, missing values, and general structure.
+
+### 2. Data Cleaning
+
+Data quality checks were performed to investigate:
+
+- Missing values
+- Duplicate records
+- Repeated order identifiers
+- Invalid numerical values
+- Date format and validity issues
+- Inconsistent categorical values
+
+Cleaning decisions were documented, and the cleaned dataset was saved separately from the raw data.
+
+### 3. Exploratory Data Analysis
+
+The cleaned dataset was used to investigate sales performance, product and category contribution, customer activity, and time-based patterns.
+
+### 4. KPI Analysis
+
+The analysis covers key metrics such as:
+
+- Total sales amount or revenue
+- Total number of distinct orders
+- Average order value
+- Total units sold
+- Top-performing product category
+- Highest revenue-generating product
+- Customer purchasing patterns
+
+The precise definitions and calculated results are documented in the analysis notebook and KPI summary workbook.
+
+### 5. Data Visualization
+
+The project includes visualizations intended to communicate:
+
+- Revenue by product category
+- Monthly sales trends
+- Payment mode distribution
+- A consolidated dashboard view of selected KPIs and charts
+
+Each visualization should be accompanied by a short interpretation supported by the data.
+
+## Key Findings
+
+The main findings are documented in the analysis notebook and final report.
+
+These include observations about data quality, sales performance, product categories, customer behavior, and time-based patterns.
+
+All reported figures and interpretations should be based on the calculated results. Potential explanations for observed patterns should not be treated as proven causes.
+
+## Project Deliverables
+
+| Deliverable | Description |
+|---|---|
+| Raw dataset | Original source data preserved for reference |
+| Cleaned dataset | Processed data prepared for analysis |
+| Data quality audit | Record of quality checks and cleaning results |
+| Analysis notebooks | Python code and analytical workflow |
+| KPI summary | Excel workbook containing key metrics and supporting tables |
+| Chart outputs | Visualizations of sales and product performance |
+| Dashboard mockup | Consolidated visual summary |
+| Final report | Written analysis, findings, recommendations, and limitations |
+
+## How to Run the Project
+
+### Prerequisites
+
+Install Python and Jupyter Notebook, or use an environment such as VS Code that supports Jupyter notebooks.
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Isha-0612/weintern-week1-data-science.git
+cd weintern-week1-data-science
+```
+
+### Step 2: Create a Virtual Environment (Recommended)
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+On macOS or Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+### Step 3: Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-The notebook is configured for Google Colab by default; the Drive-mount cell must be adapted for local execution.
 
-## Cleaning assumptions and limitations
-- The source workbook is never overwritten.
-- Repeated order IDs may represent valid multi-item orders and are not removed automatically.
-- Missing transaction values are not imputed without a defensible business rule.
-- Negative quantities may represent returns or corrections.
-- Zero-price items may be valid in some businesses.
-- Quantity × unit price is only a diagnostic for totals; discounts, taxes, shipping, and order-level totals may explain differences.
-- Proposed business meanings and detected column mappings must be confirmed against the data documentation or data owner.
+### Step 4: Open the Project
+
+```bash
+jupyter notebook
+```
+
+Open the relevant notebook from the `notebooks/` folder and execute its cells in order.
+
+Ensure that the input file paths used in the notebook match the actual repository structure.
+
+## Limitations and Assumptions
+
+- Results depend on the completeness and reliability of the supplied dataset.
+- The meaning and currency of the amount field must be confirmed before interpreting it as realized revenue.
+- Distinct order IDs are used when counting orders; individual rows may represent product lines rather than complete orders.
+- Date-based conclusions require validation of the recorded dates.
+- Descriptive analysis identifies patterns but does not establish causation.
+- Cleaning decisions and assumptions should be interpreted alongside the data quality audit.
 
 ## Author
-- **Name:Ishita Misra**
-- **Internship / organization:WEINTERN.PVT.LMT** Replace if required
+
+**GitHub:** [Isha-0612](https://github.com/Isha-0612)
+
+## Repository
+
+[WeIntern Week 1 — Data Science](https://github.com/Isha-0612/weintern-week1-data-science)
